@@ -2,13 +2,14 @@ import mysql.connector as msql
 from mysql.connector import Error
 import csv 
 
-
+#insert connection string here-
 conn = msql.connect(--connection_string_here--)
 
 csv_data = csv.reader(open('csvv.csv'))
 next(csv_data)
 cursor=conn.cursor()
 for row in csv_data:
+    #insert Database query here- 
     cursor.execute('INSERT INTO Linux.Cp(pid,name,last) VALUES(%s,%s, %s)',row)
 
 
